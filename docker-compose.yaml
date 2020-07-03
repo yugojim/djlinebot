@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  server:
+    container_name: gojimdjango
+    build: 
+      context: .
+      # dockerfile: Dockerfile
+      dockerfile: Dockerfile
+    image: gojimdjango:1.0.0
+    volumes:
+      - .:/server
+    ports:
+      - "8500:8500"
+    # env_file:
+      # - ../server/.env
+    working_dir: /server
+    tty: true

@@ -1,0 +1,561 @@
+    <form action="" method=post class=add-entry>{% csrf_token %}
+		<fieldset>
+			<legend>10分鐘 Personal information(個人資料):</legend>
+			<table border="0">
+			  <tbody>
+			  	<tr>
+				  <td>醫院別 : </td><td><input type="text" name="firstname" ></td>
+				  <td>科別 : </td><td><input type="text" name="firstname" VALUE="腦內科"></td>
+				</tr>
+				<tr>
+				  <td>病歷號 : </td><td><input type="text" name="firstname"></td>
+				  <td>流水號 : </td><td><input type="text" name="firstname"></td>
+				</tr>
+				<tr>
+				  <td>姓名 : </td><td><input type="text" name="firstname"></td>
+				  <td>性別 : </td><td><input type="radio" name="sex" value="male">男<input type="radio" name="sex" value="female">女</td>
+				</tr>
+				<tr>
+				  <td>身份證 : </td><td><input type="text" name="firstname"></td>
+				  <td>生日 : </td><td><input type="date" name="bday"></td>
+				</tr>
+				<tr>
+				  <td>身高 : </td><td><input type="number" name="HEIGHT_NM" min="1" max="300" required></td>
+				  <td>體重 : </td><td><input type="number" name="WEIGHT_NM" min="1" max="300" required></td>
+				</tr>
+				<tr>
+					<td >教育程度 :</td>
+					<td colspan=3><input type="radio" name="EDU_ID" value="1">無<input type="radio" name="EDU_ID" value="2">小學<input type="radio" name="EDU_ID" value="3">國中<input type="radio" name="EDU_ID" value="4">高中職<input type="radio" name="EDU_ID" value="5">大專<input type="radio" name="EDU_ID" value="6">研究所<input type="radio" name="EDU_ID" value="1">不詳
+					</td>
+				</tr>
+				<tr>
+				  <td>電話 (宅) :</td><td><input type="text" name="firstname"></td>
+				  <td>手機 : </td><td><input type="text" name="firstname"></td>
+				</tr>
+				<tr>
+				  <td>親友 : </td><td><input type="text" name="firstname"></td>
+				  <td>稱謂 : </td><td><input type="text" name="firstname"></td>
+				</tr>
+				<tr>
+				  <td>地址 :  </td><td><input type="text" name="firstname"></td>
+				  <td>郵遞區號 : </td><td><input type="text" name="firstname"></td>
+				</tr>
+				<tr>
+					<td >職業 : </td>
+					<td colspan=3><input type="radio" name="sex" value="male">無<input type="radio" name="sex" value="male">軍<input type="radio" name="sex" value="male">公<input type="radio" name="sex" value="male">教<input type="radio" name="sex" value="male">工<input type="radio" name="sex" value="male">農<input type="radio" name="sex" value="male">商<input type="radio" name="sex" value="male">服務業<input type="radio" name="sex" value="male">學生<input type="radio" name="sex" value="male">退休<input type="radio" name="sex" value="male">不詳<input type="radio" name="sex" value="male">其他
+					</td>
+				</tr>
+				<tr>
+					<td >入院方式 : </td><td>
+					<input type="radio" name="sex" value="male">住院<input type="radio" name="sex" value="male">門診<input type="radio" name="sex" value="male">急診<br>
+					</td>
+					<td>未住院 : </td><td><input type="radio" name="sex" value="male"></td>
+				</tr>
+				<tr>
+				  <td>住院日期 : </td><td><input type="date" name="bday"></td>
+				  <td>離院日期 : </td><td><input type="date" name="bday"></td>
+				</tr>
+				<tr>
+				  <td>Register : </td><td><input type="text" name=title></td>
+				  <td>Title : </td><td><input type="text" name=text></td>
+				</tr>
+			  </tbody>
+			</table>
+		</fieldset>
+		<fieldset>
+			<legend>10分鐘 ★時間表</legend>
+			<table border="0">
+			  <tbody>
+				<tr>
+				  <td></td>
+				  <td>日期</td>
+				  <td>時間</td>
+				  <td>不確定</td>
+				</tr>
+				<tr>
+				  <td>發生時間</td>
+				  <td><input type="date" name="bday"></td>
+				  <td><input type="time" name="bday"></td>
+				  <td><input type="checkbox" name="vehicle" value="Bike"></td>
+				</tr>
+				<tr>
+				  <td>至急診/門診時間</td>
+				  <td><input type="date" name="bday"></td>
+				  <td><input type="time" name="bday"></td>
+				  <td><input type="checkbox" name="vehicle" value="Bike"></td>
+				</tr>
+				<tr>
+				  <td>第一次醫師檢視時間</td>
+				  <td><input type="date" name="bday"></td>
+				  <td><input type="time" name="bday"></td>
+				  <td><input type="checkbox" name="vehicle" value="Bike"></td>
+				</tr>
+				<tr>
+				  <td>1st CT/MRI時間</td>
+				  <td><input type="date" name="bday"></td>
+				  <td><input type="time" name="bday"></td>
+				  <td><input type="checkbox" name="vehicle" value="Bike">外片</td>
+				</tr>
+				<tr>
+				  <td>IV-tPA</td>
+				  <td><input type="radio" name="IV-tPA" value="This">This hospital</td>
+				  <td><input type="radio" name="IV-tPA" value="Another">Another hospital</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td>IV-tPA時間</td>
+				  <td><input type="date" name="bday"></td>
+				  <td><input type="time" name="bday"></td>
+				  <td><input type="number" name="quantity" min="0" max="200">mg</td>
+				</tr>
+			  </tbody>
+			</table>
+		</fieldset>
+		<fieldset>
+			<legend>10分鐘 ★昏迷指數及生命徵象</legend>
+			<table border="0">
+			  <tbody>
+				<tr>
+				  <td>GCS:E(睜眼反應)</td><td><input type="number" name="GCSE_NM" min="0" max="4" required></td>
+				  <td>V(睜眼反應)</td><td><input type="number" name="GCSV_NM" min="0" max="5"></td>
+				  <td>M(運動反應)</td><td><input type="number" name="GCSM_NM" min="0" max="6"></td>
+				</tr>
+				<tr>
+				  <td>SBP(收縮壓) : </td><td><input type="number" name="SBP_NM" min="0" max="300"></td>
+				  <td>DBP(舒張壓) : </td><td><input type="number" name="DBP_NM" min="0" max="300"></td>
+				</tr>
+				<tr>
+				  <td>BT(體溫) : </td><td><input type="number" name="BT_NM" min="0" max="100" step="0.1"></td>
+				  <td>HR(心率) : </td><td><input type="number" name="HR_NM" min="0" max="300"></td>
+				  <td>RR(呼吸率) : </td><td><input type="number" name="RR_NM" min="0" max="200"></td>
+				</tr>
+			  </tbody>
+			</table>
+		</fieldset>
+		<fieldset disabled>
+			<legend>10分鐘 ★危險因子 <!--(  <input type="checkbox" name="" value="Bike">內請填入 0：沒有，1：有，2：不知道)--></legend>
+			<table border="0">
+				<tbody>
+					<tr>
+					  <td><input type="checkbox" name="vehicle" value="Bike"></td><td>HT(Hypertension 高血壓)</td>
+					  <td><input type="radio" name="sex" value="male"></td><td>此次中風診斷</td>
+					  <td><input type="checkbox" name="vehicle" value="Bike"></td><td>Dyslipidemia(血脂異常)</td>
+					</tr>
+					<tr>
+					  <td><input type="checkbox" name="vehicle" value="Bike"></td><td>DM(diabetes mellitus糖尿病)</td>
+					  <td><input type="radio" name="sex" value="male"></td><td>此次中風診斷</td>
+					  <td>&nbsp;&nbsp;&nbsp;<input type="checkbox" name="vehicle" value="Bike"></td><td>&nbsp;&nbsp;&nbsp;Hypertriglyceridemia(高甘油三酯血症)</td>
+					</tr>
+					<tr>
+					  <td><input type="checkbox" name="vehicle" value="Bike"></td><td colspan=3>Previous CVA(之前中風)</td>
+					  <td>&nbsp;&nbsp;&nbsp;<input type="checkbox" name="vehicle" value="Bike"></td><td>&nbsp;&nbsp;&nbsp;Hypercholesterolemia(高膽固醇血症)</td>
+					</tr>
+					<tr>
+					  <td>&nbsp;&nbsp;&nbsp;<input type="checkbox" name="vehicle" value="Bike"></td><td colspan=3>>&nbsp;&nbsp;&nbsp;Cerebral Infarction(栓塞)</td>
+					  <td><input type="checkbox" name="vehicle" value="Bike"></td><td>Polycythemia(紅細胞增多症)</td>
+					</tr>
+					<tr>
+					  <td>&nbsp;&nbsp;&nbsp;<input type="checkbox" name="vehicle" value="Bike"></td><td colspan=3>>&nbsp;&nbsp;&nbsp;Cerebral Hemorrhage(出血)</td>
+					  <td><input type="checkbox" name="vehicle" value="Bike"></td><td>Smoking(抽菸)(<input type="number" name="quantity" min="1" max="50">支/天×<input type="number" name="quantity" min="1" max="100">年)</td>
+					</tr>
+					<tr>
+					  <td><input type="checkbox" name="vehicle" value="Bike"></td><td colspan=3>Previous TIA(之前暫時缺血中風))</td>
+					  <td>&nbsp;&nbsp;&nbsp;<input type="radio" name="sex" value="male"></td><td >Current&nbsp;&nbsp;&nbsp;<input type="radio" name="sex" value="male">Past (戒2年以上)</td>
+					</tr>
+					<tr>
+					  <td><input type="checkbox" name="vehicle" value="Bike"></td><td colspan=3>Heart Disease(心臟病)</td>
+					  <td><input type="checkbox" name="vehicle" value="Bike"></td><td>Alcohol(酗酒)</td>					  
+					</tr>
+					<tr>
+					  <td><input type="checkbox" name="vehicle" value="Bike"></td><td colspan=3>Uremia(尿毒症)</td>
+					  <td><input type="checkbox" name="vehicle" value="Bike"></td><td>Cancer(癌症)&nbsp;&nbsp;&nbsp;<input type="text" name="firstname"></td>	
+					</tr>
+					<tr>
+					  <td><input type="checkbox" name="vehicle" value="Bike"></td><td colspan=3>PAD(Peripheral artery disease周邊動脈疾病)</td>
+					  <td><input type="checkbox" name="vehicle" value="Bike"></td><td>Others&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="firstname"></td>	
+					</tr>
+				</tbody>
+			</table>
+		</fieldset>
+		<fieldset disabled>
+			<legend>10分鐘 Family History(家族病史):請填入選項 (0：沒有，1：有，2：不知道，9：無兄弟或姊妹)<input type="radio" name="sex" value="male"> None</legend>
+			<table style="border-collapse: collapse;" border="1">
+			  <tbody>
+				<tr>
+				  <td>&nbsp;</td>
+				  <td>父母</td>
+				  <td>兄弟姊妹</td>
+				</tr>
+				<tr>
+				  <td>高血壓</td>
+				  <td><input type="number" name="quantity" min="0" max="9"></td>
+				  <td><input type="number" name="quantity" min="0" max="9"></td>
+				</tr>
+				<tr>
+				  <td>糖尿病</td>
+				  <td><input type="number" name="quantity" min="0" max="9"></td>
+				  <td><input type="number" name="quantity" min="0" max="9"></td>
+				</tr>
+				<tr>
+				  <td>缺血性心臟病</td>
+				  <td><input type="number" name="quantity" min="0" max="9"></td>
+				  <td><input type="number" name="quantity" min="0" max="9"></td>
+				</tr>
+				<tr>
+				  <td>中風、短暫性腦缺血</td>
+				  <td><input type="number" name="quantity" min="0" max="9"></td>
+				  <td><input type="number" name="quantity" min="0" max="9"></td>
+				</tr>
+			  </tbody>
+			</table>
+		</fieldset>
+		<fieldset disabled>
+			<legend>10分鐘 ★Type of heart disease【Ｐ】 <input type="radio" name="sex" value="male"> None</legend>
+			<table border="0">
+			  <tbody>
+				<tr>
+				  <td><input type="checkbox" name="vehicle" value="Bike">Atrial fibrillation</td>
+				  <td><input type="radio" name="sex" value="male">Heart failure</td>
+				</tr>
+				<tr>
+				  <td><input type="checkbox" name="vehicle" value="Bike">Other Ischemic heart (CAD, old MI)</td>
+				  <td><input type="radio" name="sex" value="male">AMI<4W</td>
+				</tr>
+				<tr>
+				  <td><input type="checkbox" name="vehicle" value="Bike">Valvular replacement</td>
+				  <td><input type="radio" name="sex" value="male">RHD</td>
+				</tr>
+				<tr>
+				  <td><input type="checkbox" name="vehicle" value="Bike">Endocarditis</td>
+				  <td><input type="radio" name="sex" value="male">Patent foramen ovale</td>
+				</tr>
+				<tr>
+				  <td><input type="checkbox" name="vehicle" value="Bike">Myxoma</td>
+				  <td><input type="radio" name="sex" value="male">其他   <input type=text size=20 name=text></td>
+				</tr>
+			  </tbody>
+			</table>
+		</fieldset>
+		<input type="submit" value="10 min 預測">
+		<fieldset>
+			<legend>25分鐘 ★NIHSS   ★Barthel index   ★mRS        <a href="http://www1.vghtc.gov.tw/GipOpenWeb/wSite/public/Attachment/STROKE/20150912_NIHSS.pdf" target="連結目標" title="中風量表之介紹與應用">★NIHSS   ★Barthel index   ★mRS中風量表之介紹與應用</a></legend>
+			<table style="border-collapse: collapse;" border="1">
+			  <tbody>
+				<tr>
+				  <td>★NIHSS</td>
+				  <td>最初進院</td>
+				  <td>出院</td>
+				  <td>★Barthel index</td>
+				  <td>出院</td>
+				</tr>
+				<tr>
+				  <td>日期</td>
+				  <td><input type="date" name="bday"></td>
+				  <td><input type="date" name="bday"></td>
+				  <td>日期</td>
+				  <td><input type="date" name="bday"></td>
+				</tr>
+				<tr>
+				  <td>時間</td>
+				  <td><input id="appt-time" type="time" name="appt-time"></td>
+				  <td><input type="time" name="bday"></td>
+				  <td>時間</td>
+				  <td><input type="time" name="bday"></td>
+				</tr>
+				<tr>
+				  <td>意識程度 (1a)(0-3)</td>
+				  <td><input type="number" name="quantity" min="0" max="3"></td>
+				  <td><input type="number" name="quantity" min="0" max="3"></td>
+				  <td>1 進食 (0-10)</td>
+				  <td><input type="number" name="quantity" min="0" max="10"></td>
+				</tr>
+				<tr>
+				  <td>意識程度 (1b)(0-2)</td>
+				  <td><input type="number" name="quantity" min="0" max="2"></td>
+				  <td><input type="number" name="quantity" min="0" max="2"></td>
+				  <td>2 移位 (0-15)</td>
+				  <td><input type="number" name="quantity" min="0" max="15"></td>
+				</tr>
+				<tr>
+				  <td>意識程度 (1c)(0-2)</td>
+				  <td><input type="number" name="quantity" min="0" max="2"></td>
+				  <td><input type="number" name="quantity" min="0" max="2"></td>
+				  <td>3 個人衛生 (0-5)</td>
+				  <td><input type="number" name="quantity" min="0" max="5"></td>
+				</tr>
+				<tr>
+				  <td>眼球運動 (2)(0-2)</td>
+				  <td><input type="number" name="quantity" min="0" max="2"></td>
+				  <td><input type="number" name="quantity" min="0" max="2"></td>
+				  <td>4 如廁 (0-10)</td>
+				  <td><input type="number" name="quantity" min="0" max="10"></td>
+				</tr>
+				<tr>
+				  <td>視野 (3)(0-3)</td>
+				  <td><input type="number" name="quantity" min="0" max="3"></td>
+				  <td><input type="number" name="quantity" min="0" max="3"></td>
+				  <td>5 洗澡 (0-5)</td>
+				  <td><input type="number" name="quantity" min="0" max="5"></td>
+				</tr>
+				<tr>
+				  <td>面部肌力 (4)(0-3)</td>
+				  <td><input type="number" name="quantity" min="0" max="3"></td>
+				  <td><input type="number" name="quantity" min="0" max="3"></td>
+				  <td>6 步行 (0-15)</td>
+				  <td><input type="number" name="quantity" min="0" max="15"></td>
+				</tr>
+				<tr>
+				  <td>上肢運動<br>(5aL, 左上肢)(0-4)</td>
+				  <td><input type="number" name="quantity" min="0" max="4"></td>
+				  <td><input type="number" name="quantity" min="0" max="4"></td>
+				  <td>7 上下樓梯(0-10)</td>
+				  <td><input type="number" name="quantity" min="0" max="10"></td>
+				</tr>
+				<tr>
+				  <td>上肢運動<br>(5bR, 右上肢)(0-4)</td>
+				  <td><input type="number" name="quantity" min="0" max="4"></td>
+				  <td><input type="number" name="quantity" min="0" max="4"></td>
+				  <td>8 穿脫衣服(0-10)</td>
+				  <td><input type="number" name="quantity" min="0" max="10"></td>
+				</tr>
+				<tr>
+				  <td>下肢運動<br>(6aL, 左下肢)(0-4)</td>
+				  <td><input type="number" name="quantity" min="0" max="4"></td>
+				  <td><input type="number" name="quantity" min="0" max="4"></td>
+				  <td>9 大便 (0-10)</td>
+				  <td><input type="number" name="quantity" min="0" max="10"></td>
+				</tr>
+				<tr>
+				  <td>下肢運動<br>(6bR, 右下肢)(0-4)</td>
+				  <td><input type="number" name="quantity" min="0" max="4"></td>
+				  <td><input type="number" name="quantity" min="0" max="4"></td>
+				  <td>10 小便 (0-10)</td>
+				  <td><input type="number" name="quantity" min="0" max="10"></td>
+				</tr>
+				<tr>
+				  <td>肢體運動失調 (7)(0-2)</td>
+				  <td><input type="number" name="quantity" min="0" max="2"></td>
+				  <td><input type="number" name="quantity" min="0" max="2"></td>
+				  <td>總分 (0-100)</td>
+				  <td><input type="number" name="quantity" disabled="disabled"></td>
+				</tr>
+				<tr>
+				  <td>感覺功能 (8)(0-2)</td>
+				  <td><input type="number" name="quantity" min="0" max="2"></td>
+				  <td><input type="number" name="quantity" min="0" max="2"></td>
+				  <td></td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td>語言功能 (9)(0-3)</td>
+				  <td><input type="number" name="quantity" min="0" max="3"></td>
+				  <td><input type="number" name="quantity" min="0" max="3"></td>
+				  <td></td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td>構音困難 (10)(0-2)</td>
+				  <td><input type="number" name="quantity" min="0" max="2"></td>
+				  <td><input type="number" name="quantity" min="0" max="2"></td>
+				  <td></td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td>忽略 (11)(0-2)</td>
+				  <td><input type="number" name="quantity" min="0" max="2"></td>
+				  <td><input type="number" name="quantity" min="0" max="2"></td>
+				  <td></td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td>總分total</td>
+				  <td><input type="number" name="SumNihssIn" ></td>
+				  <td><input type="number" name="SumNihssOut" ></td>
+				  <td>★mRS(0-6)</td>
+				  <td><input type="number" name="quantity" min="0" max="6"></td>
+				</tr>
+			  </tbody>
+			</table>
+		</fieldset>
+		<fieldset disabled>
+			<legend>25分鐘 未打IV-tPA原因</legend>
+			<table border="0">
+			  <tbody>
+				<tr>
+				  <td><input type="radio" name="IV-tPA" value="This"></td>
+				  <td>輸注本藥前，急性缺血性中風發作的時間已超過3小時，或症狀發作時間不明</td>
+				</tr>
+				<tr>
+				  <td><input type="radio" name="IV-tPA" value="This"></td>
+				  <td>缺血性中風發作至到院2小時內，但不符合下列施打條件</td>
+				</tr>
+				<tr>
+				  <td><input type="radio" name="IV-tPA" value="This"></td>
+				  <td>缺血性中風發作至到院2~3小時內，但不符合下列施打條件</td>
+				</tr>
+				<tr>
+				  <td>&nbsp;&nbsp;&nbsp;<input type="checkbox" name="vehicle" value="Bike"></td>
+				  <td>&nbsp;&nbsp;&nbsp;輸注本藥前，缺血性腦中風發作的時間已超過3小時</td>
+				</tr>
+				<tr>
+				  <td>&nbsp;&nbsp;&nbsp;<input type="checkbox" name="vehicle" value="Bike"></td>
+				  <td>&nbsp;&nbsp;&nbsp;輸注本藥前，急性缺血性腦中風的症狀已迅速改善或症狀輕微。（如NIHSS<6分）</td>
+				</tr>
+				<tr>
+				  <td>&nbsp;&nbsp;&nbsp;<input type="checkbox" name="vehicle" value="Bike"></td>
+				  <td>&nbsp;&nbsp;&nbsp;臨床或影像判定為嚴重之中風（如NIHSS>25）</td>
+				</tr>
+				<tr>
+				  <td>&nbsp;&nbsp;&nbsp;<input type="checkbox" name="vehicle" value="Bike"></td>
+				  <td>&nbsp;&nbsp;&nbsp;年齡在18歲以下，或80歲以上</td>
+				</tr>
+				<tr>
+				  <td>&nbsp;&nbsp;&nbsp;<input type="checkbox" name="vehicle" value="Bike"></td>
+				  <td>&nbsp;&nbsp;&nbsp;過去曾中風且合併糖尿病</td>
+				</tr>
+				<tr>
+				  <td>&nbsp;&nbsp;&nbsp;<input type="checkbox" name="vehicle" value="Bike"></td>
+				  <td>&nbsp;&nbsp;&nbsp;收縮壓>185mmhg或舒張壓>110mmhg</td>
+				</tr>
+				<tr>
+				  <td>&nbsp;&nbsp;&nbsp;<input type="checkbox" name="vehicle" value="Bike"></td>
+				  <td>&nbsp;&nbsp;&nbsp;最近3個月內有中風病史或有嚴重性頭部創傷</td>
+				</tr>
+				<tr>
+				  <td>&nbsp;&nbsp;&nbsp;<input type="checkbox" name="vehicle" value="Bike"></td>
+				  <td>&nbsp;&nbsp;&nbsp;中風發作時併發癲癇</td>
+				</tr>
+				<tr>
+				  <td>&nbsp;&nbsp;&nbsp;<input type="checkbox" name="vehicle" value="Bike"></td>
+				  <td>&nbsp;&nbsp;&nbsp;病人正接受口服抗凝血劑，如warfarin sodium（INR>1.3）</td>
+				</tr>
+				<tr>
+				  <td>&nbsp;&nbsp;&nbsp;<input type="checkbox" name="vehicle" value="Bike"></td>
+				  <td>&nbsp;&nbsp;&nbsp;最近3個月內曾患胃腸道潰瘍 </td>
+				</tr>
+				<tr>
+				  <td>&nbsp;&nbsp;&nbsp;<input type="checkbox" name="vehicle" value="Bike"></td>
+				  <td>&nbsp;&nbsp;&nbsp;家屬拒絕 </td>
+				</tr>
+				<tr>
+				  <td>&nbsp;&nbsp;&nbsp;<input type="checkbox" name="vehicle" value="Bike"></td>
+				  <td>&nbsp;&nbsp;&nbsp;其他 <input type="text" name="firstname"></td>
+				</tr>
+			  </tbody>
+			</table>
+		</fieldset>		
+        <input type="submit" value="25 min 預測">
+		<fieldset>
+			<legend>45分鐘 ★Final Stroke Diagnosis</legend>
+			<table border="0">
+			  <tbody>
+				<tr>
+				  <td><input type="radio" name="ICD_ID" value="1"></td>
+				  <td>Infarct</td>
+				  <td><input type="radio" name="ICD_ID" value="2"></td>
+				  <td>TIA (<input type="radio" name="ICDTIA_ID" value="1">carotid<input type="radio" name="ICDTIA_ID" value="2">VB)</td>
+				</tr>
+				<tr>
+				  <td><input type="radio" name="ICD_ID" value="3"></td>
+				  <td>ICH</td>
+				  <td><input type="radio" name="ICD_ID" value="4"></td>
+				  <td>SAH</td>
+				</tr>
+				<tr>
+				  <td><input type="radio" name="ICD_ID" value="99"></td>
+				  <td>其他 : <input type="text" name="firstname"></td>
+				  <td></td>
+				  <td>ICD9 : <input type="text" name="firstname"></td>
+				</tr>
+			  </tbody>
+			</table>
+		</fieldset>
+		<fieldset>
+			<legend>45分鐘 ★ECG【Ｐ】</legend>
+			<table border="0">
+			  <tbody>
+				<tr>
+				  <td><input type="radio" name="vehicle" value="Bike"></td>
+				  <td>正常</td>
+				  <td><input type="radio" name="vehicle" value="Bike"></td>
+				  <td>未做</td>
+				</tr>
+				<tr>
+				  <td><input type="checkbox" name="vehicle" value="Bike"></td>
+				  <td>LVH</td>
+				  <td><input type="checkbox" name="vehicle" value="Bike"></td>
+				  <td>Af</td>
+				  <td><input type="checkbox" name="vehicle" value="Bike"></td>
+				  <td>Q wave</td>
+				  <td><input type="checkbox" name="vehicle" value="Bike"></td>
+				  <td>其他 : <input type="text" name="firstname"></td>
+				</tr>			
+			  </tbody>
+			</table>
+		</fieldset>
+		<fieldset>
+			<legend>45分鐘 ★抽血結果 (急診抽血或第一次抽血：)</legend>
+			<table border="0">
+			  <tbody>
+				<tr>
+				  <td>Hb</td>
+				  <td><input type="number" name="quantity" min="0" step=0.1></td>
+				  <td>Hct</td>
+				  <td><input type="number" name="quantity" min="0" step=0.1></td>
+				  <td>Platelet</td>
+				  <td><input type="number" name="quantity" min="0" step=0.1></td>
+				  <td>WBC</td>
+				  <td><input type="number" name="quantity" min="0" step=0.1></td>
+				</tr>
+				<tr>
+				  <td>PTT</td>
+				  <td><input type="number" name="quantity" min="0" step=0.1>/<input type="number" name="quantity" min="0" step=0.1></td>
+				  <td>PT(INR)</td>
+				  <td><input type="number" name="quantity" min="0" step=0.1></td>
+				  <td>Glucose(ER)</td>
+				  <td><input type="number" name="quantity" min="0" step=0.1></td>
+				  <td>BUN</td>
+				  <td><input type="number" name="quantity" min="0" step=0.1></td>
+				</tr>
+				<tr>
+				  <td>Creatinine</td>
+				  <td><input type="number" name="quantity" min="0" step=0.1></td>
+				  <td>Albumin</td>
+				  <td><input type="number" name="quantity" min="0" step=0.1></td>
+				  <td>CRP</td>
+				  <td><input type="number" name="quantity" min="0" step=0.1></td>
+				  <td>HbA1c</td>
+				  <td><input type="number" name="quantity" min="0" step=0.1></td>
+				</tr>				
+			  </tbody>
+			</table>
+		</fieldset>
+		<fieldset>
+			<legend>45分鐘 ★抽血結果 (第一次空腹抽血：)</legend>
+			<table border="0">
+			  <tbody>
+				<tr>
+				  <td>Glu(AC)</td>
+				  <td><input type="number" name="quantity" min="0" step=0.1></td>
+				  <td>UA</td>
+				  <td><input type="number" name="quantity" min="0" step=0.1></td>
+				  <td>T-CHO</td>
+				  <td><input type="number" name="quantity" min="0" step=0.1></td>
+				  <td>TG</td>
+				  <td><input type="number" name="quantity" min="0" step=0.1></td>
+				</tr>
+				<tr>
+				  <td>HDL</td>
+				  <td><input type="number" name="quantity" min="0" step=0.1></td>
+				  <td>LDL</td>
+				  <td><input type="number" name="quantity" min="0" step=0.1></td>
+				  <td>GOT</td>
+				  <td><input type="number" name="quantity" min="0" step=0.1></td>
+				  <td>GPT</td>
+				  <td><input type="number" name="quantity" min="0" step=0.1></td>
+				</tr>		
+			  </tbody>
+			</table>
+		</fieldset>
+		<input type="submit" value="45 min 醫療建議">
+    </form>
