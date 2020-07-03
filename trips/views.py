@@ -17,7 +17,7 @@ from linebot.models import MessageEvent, TextSendMessage, ImageSendMessage, \
 line_bot_api = LineBotApi(settings.LINE_CHANNEL_ACCESS_TOKEN)
 parser = WebhookParser(settings.LINE_CHANNEL_SECRET)
 
-HospitalDf = pd.read_csv('.\hospital20190131.csv',low_memory=False)
+#HospitalDf = pd.read_csv('.\hospital20190131.csv',low_memory=False)
 
 ##from chatterbot import ChatBot
 ##from chatterbot.trainers import ChatterBotCorpusTrainer
