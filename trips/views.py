@@ -72,6 +72,9 @@ def linebot(request):
                     #text=chatbot.get_response(event.message.text)
                     #repleM=TextSendMessage(text.text)
                     #print(repleM)
+                    if event.message.text == '你會什麼':
+                        repleM=TextSendMessage('我可以幫您計算 中風機率 \n提供當地 醫院資訊 \n提供中風 衛生教育\n如果有無法回答\
+                                               的問題也會記錄起來，下次更新的時候就能回答您')
                     if event.message.text == '中風資訊':
                         repleM=TextSendMessage('請幫我填問卷，然後告訴我機率好嗎，網址是 http://120.126.47.101/trips/')
                     if event.message.text == '中風機率':
@@ -80,15 +83,13 @@ def linebot(request):
                     if event.message.text.find('區')>0:
                         try:
                             df1=HospitalDf[HospitalDf.縣市鄉鎮.str.find(event.message.text)>0]
-                            #df1=HospitalDf[HospitalDf.縣市鄉鎮.str.find('龜山區')>0]
                             df1=df1.reset_index(drop=True)
                             df2=df1[df1.醫師>10]
                             df2=df2.reset_index(drop=True)
-                            hospitaltext = event.message.text+'供中風相關醫療的醫院，'
-                            #hospitaltext = '供中風相關醫療的醫院，'
+                            hospitaltext = event.message.text+'供中風相關醫療的醫院，\n'
                             for i in range(len(df2)):
                                 url2=' https://www.google.com/search?q='
-                                hospitaltext = hospitaltext + url2 + df2.loc[i].機構名稱
+                                hospitaltext = hospitaltext + url2 + df2.loc[i].機構名稱+'\n'
                             repleM=TextSendMessage(hospitaltext)
                         except:
                             repleM=TextSendMessage('行政區有誤或無相關醫院')
