@@ -80,12 +80,12 @@ def linebot(request):
                     if event.message.text.find('區')>0:
                         try:
                             df1=HospitalDf[HospitalDf.縣市鄉鎮.str.find(event.message.text)>0]
-                            df1=HospitalDf[HospitalDf.縣市鄉鎮.str.find('龜山區')>0]
+                            #df1=HospitalDf[HospitalDf.縣市鄉鎮.str.find('龜山區')>0]
                             df1=df1.reset_index(drop=True)
                             df2=df1[df1.醫師>10]
                             df2=df2.reset_index(drop=True)
-                            #hospitaltext = event.message.text+'供中風相關醫療的醫院，'
-                            hospitaltext = '供中風相關醫療的醫院，'
+                            hospitaltext = event.message.text+'供中風相關醫療的醫院，'
+                            #hospitaltext = '供中風相關醫療的醫院，'
                             for i in range(len(df2)):
                                 url2=' https://www.google.com/search?q='
                                 hospitaltext = hospitaltext + url2 + df2.loc[i].機構名稱
