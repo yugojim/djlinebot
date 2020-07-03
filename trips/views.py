@@ -4,6 +4,8 @@ from django.template.loader import get_template
 from trips.models import contactdata
 import pandas as pd 
 import numpy as np
+from mysite import settings
+import os
 
 from django.conf import settings
 from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseForbidden
@@ -16,8 +18,8 @@ from linebot.models import MessageEvent, TextSendMessage, ImageSendMessage, \
 
 line_bot_api = LineBotApi(settings.LINE_CHANNEL_ACCESS_TOKEN)
 parser = WebhookParser(settings.LINE_CHANNEL_SECRET)
-
-#HospitalDf = pd.read_csv('.\hospital20190131.csv',low_memory=False)
+dfpath = os.path.join(settings.MODELS, 'hospital20190131.csv')
+HospitalDf = pd.read_csv(dfpath,low_memory=False)
 
 ##from chatterbot import ChatBot
 ##from chatterbot.trainers import ChatterBotCorpusTrainer
@@ -73,7 +75,7 @@ def linebot(request):
                         repleM=TextSendMessage('請幫我填問卷，然後告訴我機率好嗎，網址是 http://120.126.47.101/trips/')
                     if event.message.text == '中風機率':
                         repleM=TextSendMessage('是高危險群，請立即就醫，請告訴我您的居住地，縣市、鄉鎮或行政區，如北投區，將給您當地有相關醫療的資訊')
-                    '''    
+                        
                     if event.message.text.find('區')>0:
                         try:
                             df1=HospitalDf[HospitalDf.縣市鄉鎮.str.find(event.message.text)>0]
@@ -85,7 +87,7 @@ def linebot(request):
                             repleM=TextSendMessage(hospitaltext)
                         except:
                             repleM=TextSendMessage('行政區有誤或無相關醫院')
-                    '''        
+                            
                     if event.message.text == '榮總位置':
                         title = "台北榮民總醫院"
                         address = "112台北市北投區石牌路二段201號"
